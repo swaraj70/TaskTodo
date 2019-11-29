@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    <title>Home - TaskTodo</title>
+{% endblock title %}
+    
+{% block content %}
+    <div class="container">
+        <center>
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <img src="{% static 'images/meet.jpg' %}" class="rounded-lg shadow" width='360' height='250'>
+                </div>
+                <div class="col-md-4">
+                    <img src="{% static 'images/read.jpg' %}" class="rounded-lg shadow" width='360' height='250'>
+                </div>
+                <div class="col-md-4">
+                    <img src="{% static 'images/yoga.jpg' %}" class="rounded-lg shadow" width='360' height='250'>
+                </div>
+            </div>
+        </center>    
+
+        <div class="row mt-5">
+            <div class="col-md-10 offset-md-1">
+                <center><p class="h1">Get organized and keep track of your life.</p></center>
+                <center><p class="h5 mt-3">Want to make sure that your tasks are never forgotten and completed on time all the time?</p></center>
+                <center class="mt-4"><a href="{% url 'todolist' %}"><button type="button" class="btn btn-danger btn-lg shadow">Get Started</button></a></center>
+            </div>
+        </div>
+</div>
+{% endblock content %}

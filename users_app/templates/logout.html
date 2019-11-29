@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+    <title>Logout - TaskTodo</title>
+{% endblock title %}
+    
+{% block content %}
+    <center>
+        <div class="container mt-5">
+            <h2>You are Logged Out</h2>
+            <a href="{% url 'home' %}"><button type="button" class="btn btn-danger mt-5">Done</button></a>
+        </div>
+    </center>
+{% endblock content %}

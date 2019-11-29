@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+    <title>Login - TaskTodo</title>
+{% endblock title %}
+    
+{% block content %}
+
+    {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        {% endfor %}
+    {% endif %}
+
+    <section class="container-fluid">
+            <section class="row justify-content-center">
+                <form method="POST" class="mt-5 col-6 form-container">
+                    {% csrf_token %}
+                    {{ form | crispy}}
+                    <center><button type="submit" class="btn btn-danger mt-2 mb-2">Login</button></center>
+                    <div class="form-inline my-2 my-lg-0 row justify-content-center">
+                        <h4 class="p-2">Don't have an account?</h4>
+                        <a href="{% url 'register' %}"><h5>Sign Up</h5></a>
+                    </div>
+                </form>
+            </section>
+    </section>
+{% endblock content %}
