@@ -1,1 +1,1 @@
-web: gunicorn tasktododjango.wsgi
+web: gunicorn taskmate.wsgi
